@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Icons with Wiggle Effect</title>
+    <style>
+        /* Keyframes for the wiggle animation */
+        @-webkit-keyframes wiggle {
+            0% {transform: rotateZ(2deg);}
+            50% {transform: rotateZ(-2deg);}
+            100% {transform: rotateZ(2deg);}
+        }
+
+        /* Mixin for icon transition */
+        .iconTransition {
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+        }
+
+        /* Mixin for the wiggle effect */
+        .wiggler {
+            animation-name: wiggle;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .wrap {
+            width: 35%;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social {
+            font-size: 2.5em;
+            height: 50px;
+            overflow: hidden;
+            border-bottom: 1px solid #abc;
+        }
+
+        i {
+            position: relative;
+            top: 30px;
+            margin: 0 10px;
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+        }
+
+        i:hover {
+            top: 5px;
+            animation-name: wiggle;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .fb {
+            color: #3B5998;
+        }
+
+        .tw {
+            color: #09AEEC;
+        }
+
+        .yt {
+            color: #AA2A25;
+        }
+
+        .dr {
+            color: #ea4c89;
+        }
+
+        .sk {
+            color: #00A5E6;
+        }
+
+        .db {
+            color: #000;
+        }
+
+        .apple {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="social">
+            <i class="icon-facebook fb">F</i>
+            <i class="icon-twitter tw">T</i>
+            <i class="icon-youtube yt">Y</i>
+            <i class="icon-dribble dr">D</i>
+            <i class="icon-skype sk">S</i>
+            <i class="icon-dropbox db">D</i>
+            <i class="icon-apple apple">A</i>
+        </div>
+    </div>
+</body>
+</html>
